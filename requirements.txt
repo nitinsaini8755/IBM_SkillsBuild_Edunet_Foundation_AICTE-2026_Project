@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-dotenv
+langchain
+langchain-ibm
+chromadb
+sentence-transformers
+pytest
+python-multipart
