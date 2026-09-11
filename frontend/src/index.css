@@ -1,0 +1,145 @@
+:root {
+  /* IBM Design Language inspired colors */
+  --blue-60: #0f62fe;
+  --blue-70: #0043ce;
+  --blue-80: #002d9c;
+  --blue-90: #001141;
+  --gray-10: #f4f4f4;
+  --gray-20: #e0e0e0;
+  --gray-30: #c6c6c6;
+  --gray-80: #393939;
+  --gray-90: #262626;
+  --gray-100: #161616;
+  
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-80);
+  --bg-primary: #ffffff;
+  --bg-secondary: var(--gray-10);
+  
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--blue-60);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Base Components */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary {
+  background-color: var(--blue-60);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-70);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--gray-80);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-90);
+  text-decoration: none;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--gray-20);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-30);
+  border-radius: var(--border-radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--blue-60);
+  box-shadow: 0 0 0 2px rgba(15, 98, 254, 0.2);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.header {
+  border-bottom: 1px solid var(--gray-20);
+  padding: var(--spacing-md) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--blue-80);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
